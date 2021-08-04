@@ -83,8 +83,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DontMix: 0
     - _DstBlend: 10
-    - _Fade: 0.15
-    - _FogHeight: 1.45
+    - _Fade: 0.41
+    - _FogHeight: 3.17
     - _FogYStartPos: -1.13
     - _GSpace: 0
     - _GlossMapScale: 1
@@ -160,17 +160,17 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1_B: {r: 1, g: 1, b: 1, a: 1}
     - _Color1_D: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1_F: {r: 0.73333335, g: 0.43921572, b: 0.26666668, a: 1}
+    - _Color1_F: {r: 0.33748665, g: 0.53418434, b: 0.745283, a: 1}
     - _Color1_L: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1_R: {r: 0.9960785, g: 0.74509805, b: 0.882353, a: 1}
-    - _Color1_T: {r: 0.9960785, g: 0.95294124, b: 0.8705883, a: 1}
+    - _Color1_R: {r: 0, g: 0.044348717, b: 1, a: 1}
+    - _Color1_T: {r: 0, g: 0.88816977, b: 1, a: 1}
     - _Color2_B: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_D: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_F: {r: 0.4287014, g: 0.03676468, b: 1, a: 1}
     - _Color2_L: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_R: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_T: {r: 1, g: 1, b: 1, a: 1}
-    - _Color_Fog: {r: 0.2142665, g: 0.03844074, b: 0.5808823, a: 1}
+    - _Color_Fog: {r: 0, g: 0.21662426, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GizmoPosition_B: {r: 0, g: 0, b: 10, a: 10}
     - _GizmoPosition_D: {r: 0, g: 0, b: 10, a: 10}

@@ -16,6 +16,7 @@ public class Math : MonoBehaviour
     public float sizeSpeed;
 
     private bool fall;
+    [SerializeField]
     private bool finish;
 
     void Start()
@@ -42,28 +43,34 @@ public class Math : MonoBehaviour
 
         if (rolller.localScale.y <= 0 && !finish)
             GameController.GK.Loose();
-        else if (rolller.localScale.y <= 0 && finish)
+        else if (rolller.localScale.y <= 0.09f && finish)
+        {
+            print("Stop");
             GameController.GK.Win();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "MathTab")
+        if (GetComponent<Math>().enabled)
         {
-            if (bonusWalls[0] == null)
-                bonusWalls[0] = other.GetComponent<BonusWall>();
-            else
-                bonusWalls[1] = other.GetComponent<BonusWall>();
-        }
-        if(other.tag == "MathFall")
-        {
-            rollerSizeY = Mathf.Clamp(rollerSizeY - other.GetComponent<BonusWall>().number, 0f, 10f);
-            fall = true;
-        }   
-        if(other.tag == "FinalGround")
-        {
-            finish = true;
-            rollerSizeY = Mathf.Clamp(rollerSizeY - 0.8f, 0f, 10f);
+            if (other.tag == "MathTab")
+            {
+                if (bonusWalls[0] == null)
+                    bonusWalls[0] = other.GetComponent<BonusWall>();
+                else
+                    bonusWalls[1] = other.GetComponent<BonusWall>();
+            }
+            if (other.tag == "MathFall")
+            {
+                rollerSizeY = Mathf.Clamp(rollerSizeY - other.GetComponent<BonusWall>().number, 0f, 10f);
+                fall = true;
+            }
+            if (other.tag == "FinalGround")
+            {
+                finish = true;
+                rollerSizeY = Mathf.Clamp(rollerSizeY - 0.8f, 0f, 10f);
+            }
         }
     }
 

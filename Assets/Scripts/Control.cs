@@ -19,6 +19,8 @@ public class Control : MonoBehaviour
     private CharacterController ch_controller;
     private Animator ch_animator;
 
+    private bool finish;
+
     void Start()
     {
         cam =GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -29,7 +31,10 @@ public class Control : MonoBehaviour
 
     void Update()
     {
-        CharacterMove();
+        if (!finish)
+            CharacterMove();
+        else
+            ch_controller.Move(new Vector3(0, gravityforce, speedMove) * Time.deltaTime);
         GamingGravity();
     }
 
@@ -86,13 +91,21 @@ public class Control : MonoBehaviour
             if (other.tag == "FinalGround")
             {
                 speedMove += 0.5f;
-                if(GetComponent<Math>().rolller.localScale.y > 0)
+                if(GetComponent<Math>().rolller.localScale.y > 0.09f)
                     other.GetComponent<FinalGround>().Activate();
             }
             if (other.tag == "Finish")
             {
-                GetComponent<Control>().enabled = false;
-                GameController.GK.Win();
+                finish = true;
+                Invoke("DisabelScript", 2f);
+                //GetComponent<Control>().enabled = false;
+                if (GetComponent<Math>().rolller.localScale.y > 0.09f)
+                {
+                    GameController.GK.Win();
+                    GameController.GK.DestroyGlassesBlocks();
+                }
+                else
+                    GameController.GK.DestroyGlassesBlocks();
             }
             if (other.tag == "DieCollider")
             {
@@ -102,5 +115,10 @@ public class Control : MonoBehaviour
             if (other.tag == "Trampoline")
                 gravityforce = other.GetComponent<Trampoline>().jumpPower;
         }
+    }
+
+    private void DisabelScript()
+    {
+        GetComponent<Control>().enabled = false;
     }
 }
