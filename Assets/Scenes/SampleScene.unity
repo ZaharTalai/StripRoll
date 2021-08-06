@@ -4277,6 +4277,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1124706505}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &473390300
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473390296}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &485673607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5317,6 +5333,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2073054834}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &681380854
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681380850}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &689103821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3772551937752447412, guid: 71438d10bb373b6479bcba5bc370e08e,
@@ -9757,7 +9789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitive: 8
-  speedMove: 6
+  speedMove: 8
 --- !u!114 &1335691834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12006,6 +12038,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1666054059}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1698103323
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698103319}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1721458866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8605677510049591074, guid: 42cb0cdc97f527d41ab25d1ffd6cec16,

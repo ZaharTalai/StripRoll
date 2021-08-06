@@ -33,6 +33,11 @@ public class GameController : MonoBehaviour
             go.isKinematic = true;
             go.useGravity = false;
         }
+
+        foreach (ParticleSystem go in winParticles)
+        {
+            go.Stop();
+        }
     }
 
     public void Loose()

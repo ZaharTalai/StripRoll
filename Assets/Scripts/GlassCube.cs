@@ -20,6 +20,7 @@ public class GlassCube : MonoBehaviour
         foreach (GameObject go in shards)
         {
             go.SetActive(true);
+            go.GetComponent<Rigidbody>().AddForce(go.transform.forward * 10f, ForceMode.Impulse);
         }
     }
 }
