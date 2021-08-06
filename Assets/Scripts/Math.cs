@@ -31,19 +31,20 @@ public class Math : MonoBehaviour
             CompareResults();
         }
 
-        if (rolller.localScale.y != rollerSizeY) {
-            float rollerY = Mathf.Lerp(rolller.localScale.y, rollerSizeY, Time.deltaTime * (fall ? sizeSpeed / 2: sizeSpeed));
+        if (rolller.localScale.y - 0.5f != rollerSizeY + 0.5f) {
+            float rollerY = Mathf.Lerp(rolller.localScale.y, rollerSizeY + 0.5f, Time.deltaTime * (fall ? sizeSpeed / 2: sizeSpeed));
             rolller.localScale = new Vector3(1f, rollerY, rollerY);
             rolller.localPosition = new Vector3(0f, (rollerY - 1) / 2f, 0f);
             rollerCylinder.localPosition = rolller.localPosition;
             player.localPosition = new Vector3(0f, rollerCylinder.localPosition.y + (rollerY / 2f), 0f);
             text.transform.localPosition = new Vector3(0f, rolller.localPosition.y, -(rollerY / 2f));
-            text.GetComponent<TextMesh>().text = string.Format("{0:N1}", rollerY); 
+            text.GetComponent<TextMesh>().text = string.Format("{0:N1}", rollerY - 0.5f); 
         }
 
-        if (rolller.localScale.y <= 0 && !finish)
+        if (rolller.localScale.y - 0.45f <= 0.09 && !finish)
+            //print("Loose");
             GameController.GK.Loose();
-        else if (rolller.localScale.y <= 0.09f && finish)
+        else if (rolller.localScale.y - 0.45f <= 0.09f && finish)
         {
             print("Stop");
             GameController.GK.Win();
